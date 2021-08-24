@@ -10,12 +10,10 @@ public class CinemaMapper {
     public CinemaResponse toResponse(Cinema cinema){
 
         CinemaResponse cinemaResponse = new CinemaResponse();
-
-        BeanUtils.copyProperties(cinema, cinemaResponse);
-
         cinemaResponse.setMovies(cinema.getMovies());
-        cinemaResponse.setScreenings(cinema.getScreenings());
-
+        cinemaResponse.setName(cinema.getName());
+        cinemaResponse.setId(cinema.getId());
+        
         return cinemaResponse;
     }
 }

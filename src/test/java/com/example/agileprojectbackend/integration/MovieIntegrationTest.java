@@ -25,15 +25,14 @@ public class MovieIntegrationTest {
         //given
 
         final Movie movie = new Movie(2,"Enteng Kabisote","Enteng bought mushroom","Directed by: Piolo", "Rated: PG",
-               null,"Genre: Romance", null, "Cast: Edgar", "sampleurl");
+               null,"Genre: Romance", null, "Cast: Edgar", "sampleurl", "Showing", 3.0, 4.0);
         final Movie getMovie =  movieRepository.save(movie);
         //when and then
-        mockMvc.perform(MockMvcRequestBuilders.get("/movies/{id}", movie.getId()))
+        mockMvc.perform(MockMvcRequestBuilders.get("/movies/{id}", movie.getMovieId()))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.name").value("Enteng Kabisote"))
                 .andExpect(jsonPath("$.synopsis").value("Enteng bought mushroom"))
                 .andExpect(jsonPath("$.directedBy").value("Directed by: Piolo"))
                 .andExpect(jsonPath("$.rated").value("Rated: PG"));
-
     }
 }

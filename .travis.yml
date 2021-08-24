@@ -1,18 +1,17 @@
 language: java
 dist: trusty
 jdk:
-  - oraclejdk8
-
+- oraclejdk8
 before_install:
-  - chmod +x gradlew
+- chmod +x gradlew
 before_script:
-  - "./gradlew test"
+- "./gradlew test"
 script:
-  - "./gradlew build"
+- "./gradlew build"
 deploy:
   provider: heroku
   api_key:
-    secure: ba912765-df3c-4d60-81ca-773f29f36e2c
-  app: agile-project-backend
+    secure: RE/jL2FSkZD1Z9KP3zO/O79wKHpSZC75BpUYp8iM7ftPRTqjlz+2kUoBdcR1wnTG3AH5OM07yfxgG74cX7ZdqqtmzqiAd0UwXtfQd4sPNae2gqK9op6muNRZIVC6g/wOlpLGI3/Ali2NyFCA880U71wEalJNO13+moORK2ph8/g03goq43OWZucimjC5L5S+vOSvh2C3NEPzyDeNV2+L7omU9MC5CXha1qDE1dmXM/s9Y5yY1OFnmdLV1xsMosqOvRWuIouyhyWBtEuz4/3BqycCPKtIZ4H72Kxp62urUdP2dUNvJNXFPn6nb4acFPwKE83qJGQ1TzBQP+vsP2mdhXFE4L9PLqptXSbD9knAnQkiX7iymLDELrnnUsToGC3NG2gw8JwdrYhc5S+SFkpQMRfHBF9fXcUG4uKqqd6Ecn+4Ia+LNYErH/RQEFM6PZaw6NIa/zstWxSx2X52jMdli5J/UwoCTgWiFJ7uFamomUp9bJh1nSH9tsoKfF4tFYC5P4IkWh8Eud51Z7rRPudp56Jclu9jtO+PvNi3bJGmMQ6q8o/srftRzCMQEsIUZDKNU95nE1IIGi+jTgmOaTAcHC1SM0lDHAlZCuZy9jt332NKKtyOZuTTXZoH4f4kHYmsaUYA1OZZU5YpD50P/uzHtQ1JXnDp1qpfzutU6m3vekM=
+  app: cine-q-backend
   on:
     repo: gherdeguia/agile-project-backend

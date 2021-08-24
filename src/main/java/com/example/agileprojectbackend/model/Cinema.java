@@ -14,29 +14,14 @@ public class Cinema {
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "id")
     private List<Screening> screenings;
 
-    public List<Screening> getScreenings() {
-        return screenings;
-    }
-
-    public void setScreenings(List<Screening> screenings) {
-        this.screenings = screenings;
-    }
-
-    public Cinema() {
-    }
-
-    public Cinema(Integer id, String name, List<Movie> movies) {
+    public Cinema(Integer id, String name, List<Movie> movies, List<Screening> screeningList) {
         this.id = id;
         this.name = name;
         this.movies = movies;
+        this.screenings = screeningList;
     }
 
-    public List<Movie> getMovies() {
-        return movies;
-    }
-
-    public void setMovies(List<Movie> movies) {
-        this.movies = movies;
+    public Cinema() {
     }
 
     public Integer getId() {
@@ -55,4 +40,19 @@ public class Cinema {
         this.name = name;
     }
 
+    public List<Screening> getScreening() {
+        return screenings;
+    }
+
+    public void setScreening(List<Screening> screenings) {
+        this.screenings = screenings;
+    }
+
+    public List<Movie> getMovies() {
+        return movies;
+    }
+
+    public void setMovies(List<Movie> movies) {
+        this.movies = movies;
+    }
 }

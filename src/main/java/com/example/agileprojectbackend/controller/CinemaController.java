@@ -31,5 +31,4 @@ public class CinemaController {
     public List<Time> findCinemaName1(@RequestParam String cinemaName) {
         return cinemaService.getScreenTimeById(cinemaName);
     }
-
 }
