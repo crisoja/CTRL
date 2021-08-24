@@ -1,5 +1,7 @@
 package com.example.agileprojectbackend.service;
 
+import com.example.agileprojectbackend.exception.MovieNotFoundException;
+import com.example.agileprojectbackend.model.Movie;
 import com.example.agileprojectbackend.repository.CinemaRepository;
 import com.example.agileprojectbackend.model.Cinema;
 import com.example.agileprojectbackend.repository.MovieRepository;
